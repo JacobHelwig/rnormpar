@@ -39,9 +39,8 @@ norm_mat_par <- function(){
   doParallel::registerDoParallel(cl)
 
   x <- foreach::`%dopar%`(
-    foreach::foreach(j = 1:5, .errorhandling='pass', .noexport = c("rnorm_n", "rnorm1"), .packages = "Rcpp"),
+    foreach::foreach(j = 1:5, .packages = "rnormpar"),
     {
-      sourceCpp("src/rnorm_c.cpp")
       norm_mat()
     })
 

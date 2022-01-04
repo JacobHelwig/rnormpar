@@ -2,10 +2,10 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rnorm1 <- function() {
-    .Call('_rnormpar_rnorm1', PACKAGE = 'rnormpar')
+    .Call(`_rnormpar_rnorm1`)
 }
 
 rnorm_n <- function(n = 1L, mu = 0, sd = 1) {
-    .Call('_rnormpar_rnorm_n', PACKAGE = 'rnormpar', n, mu, sd)
+    .Call(`_rnormpar_rnorm_n`, n, mu, sd)
 }
 

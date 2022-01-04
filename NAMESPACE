@@ -2,3 +2,5 @@
 
 export(norm_mat)
 export(norm_mat_par)
+importFrom(Rcpp,sourceCpp)
+useDynLib(rnormpar, .registration = TRUE)
